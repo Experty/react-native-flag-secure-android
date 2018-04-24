@@ -19,7 +19,12 @@ public class FlagSecurePackage implements ReactPackage {
         modules.add(new FlagSecure(reactContext));
         return modules;
     }
-    
+
+    @Override
+    public List<Class<? extends JavaScriptModule>> createJSModules() {
+        return Collections.emptyList();
+    }
+
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
         return new ArrayList<>();
